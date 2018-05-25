@@ -1,0 +1,26 @@
+apply from: "../../java.gradle"
+
+apply plugin: "org.springframework.boot"
+
+group = "com.johnhancock"
+version = "1.1.0-SNAPSHOT"
+description = "John Hancock :: EFS Document Management :: EFSService"
+
+dependencies {
+    compile project(":components:efs-doc-management")
+    implementation "io.projectreactor:reactor-core:3.0.2.RELEASE"
+    implementation group: 'org.springframework', name: 'spring-webflux', version: '5.0.0.RELEASE'
+    compile "org.springframework.boot:spring-boot-starter-web:$springBootVersion"
+    //providedRuntime group: 'org.springframework.boot', name: 'spring-boot-starter-tomcat', version: '7.0.52'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-tomcat', version: '1.3.3.RELEASE'
+    //JHI JAR Custom jar
+    compile group: 'JHI', name: 'JHCommonLoggingException', version: '0.0.1'
+
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.0.0.RELEASE'
+    testCompile group: 'junit', name: 'junit', version: '4.4'
+
+}
+
+test {
+    testLogging.showStandardStreams = true
+}

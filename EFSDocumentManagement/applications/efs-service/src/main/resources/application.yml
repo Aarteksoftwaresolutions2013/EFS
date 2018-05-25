@@ -1,0 +1,3 @@
+logging.level:
+  root: WARN
+  com.johnhancock.efs: DEBUG

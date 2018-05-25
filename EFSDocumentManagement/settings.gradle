@@ -1,0 +1,5 @@
+rootProject.name = "EFSDocumentManagement"
+
+
+include "applications:efs-service"
+include "components:efs-doc-management"

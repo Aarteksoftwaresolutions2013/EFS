@@ -1,0 +1,8 @@
+logging.level:
+  root: WARN
+  com.johnhancock.efs: DEBUG
+efs:
+  url: https://efsjhann-np.dstcorp.net/testapp/EFSWS/api/v1/action
+  uri:
+    - /logon
+    - /logoff

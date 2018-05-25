@@ -1,0 +1,8 @@
+---
+memory: 2G
+instances: 1
+applications:
+- name: efs-service
+  routes:
+    - route: efsAPI-dev.apps.cac.preview.pcf.manulife.com
+  path: ./applications/efs-service/build/libs/efs-service-1.1.0-SNAPSHOT.jar
